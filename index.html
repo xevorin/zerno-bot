@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бот кофейни «Зерно»</title>
+<meta name="description" content="Telegram-бот для приёма заказов с собой в кофейне «Зерно»: демо прямо на странице и код на GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sim.css">
+</head>
+<body>
+<main class="page">
+  <section class="side" aria-labelledby="title">
+    <h1 id="title">Telegram-бот для приёма заказов</h1>
+    <p class="lead">Кофейня «Зерно», заказ с собой. Клиент собирает заказ кнопками и выбирает, через сколько минут заберёт его. Бариста получает заказ в рабочий чат, жмёт «Готово», и клиенту приходит уведомление.</p>
+    <ul class="stack" aria-label="Стек">
+      <li>Python 3.12, aiogram 3, long polling</li>
+      <li>SQLite через aiosqlite</li>
+      <li>Меню в JSON, общее для бота и демо</li>
+      <li>pytest: тесты корзины, времени и текстов</li>
+    </ul>
+    <a class="code-link" href="https://github.com/xevorin/zerno-bot">Код на GitHub</a>
+    <p class="note">Демо: бот работает прямо на странице, это симуляция логики настоящего бота.</p>
+  </section>
+
+  <section class="phone" aria-label="Демо чата с ботом">
+    <div class="screen">
+      <header class="top">
+        <span class="avatar" aria-hidden="true">З</span>
+        <div><b>Зерно, заказ с собой</b><small>бот</small></div>
+      </header>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <div class="chat" id="chat" aria-live="polite"></div>
+      <div class="composer">
+        <button type="button" class="cmd" data-cmd="/start">/start</button>
+        <button type="button" class="cmd" data-cmd="/cancel">/cancel</button>
+        <span class="hint">Жмите кнопки под сообщениями</span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">Учебный проект · Егор Фарафонов · <a href="https://www.fl.ru/users/farafonovegor07/">профиль на FL.ru</a></footer>
+<script src="sim.js"></script>
+</body>
+</html>
